@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-exec openvpn --dev tun \
+exec openvpn --dev $OPENVPN_CLIENT_DEV \
 	--ca /etc/ssl/openvpn-client/ca.pem \
 	--cert /etc/ssl/openvpn-client/cert.pem \
 	--key /etc/ssl/openvpn-client/key.pem \
