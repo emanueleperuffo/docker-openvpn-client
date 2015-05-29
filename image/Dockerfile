@@ -5,7 +5,6 @@ ENV HOME /root
 ADD . /build
 
 ENV OPENVPN_HOST openvpn.example.com
-ENV CLIENT_NAME client_name
 
 RUN /build/prepare.sh && \
 	/build/services.sh && \
