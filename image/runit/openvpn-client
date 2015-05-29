@@ -4,9 +4,9 @@ set -e
 chmod 600 /etc/ssl/openvpn-client/*
 
 exec openvpn --dev tun \
-	--ca /etc/ssl/openvpn-client/openvpn-client.ca.pem \
-	--cert /etc/ssl/openvpn-client/openvpn-client.cert.pem \
-	--key /etc/ssl/openvpn-client/openvpn-client.key.pem \
+	--ca /etc/ssl/openvpn-client/ca.pem \
+	--cert /etc/ssl/openvpn-client/cert.pem \
+	--key /etc/ssl/openvpn-client/key.pem \
 	--client --remote $OPENVPN_HOST \
 	--proto tcp --port 1194 --comp-lzo adaptive \
 	--persist-tun  --persist-key --nobind
