@@ -7,4 +7,5 @@ exec openvpn --dev $OPENVPN_CLIENT_DEV \
 	--key /etc/ssl/openvpn-client/key.pem \
 	--client --remote $OPENVPN_HOST \
 	--proto tcp-client --port 1194 --comp-lzo adaptive \
-	--persist-tun  --persist-key --nobind --up-delay
+	--persist-tun  --persist-key --nobind --up-delay \
+	--syslog
